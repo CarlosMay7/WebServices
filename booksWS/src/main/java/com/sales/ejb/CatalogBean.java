@@ -12,15 +12,15 @@ public class CatalogBean {
     private List<Book> books = new ArrayList<>();
 
     public CatalogBean() {
-        books.add(new Book(1, "Shadow Hunters", "Cassandra Clare", 20.50));
-        books.add(new Book(2, "El Principito", "Antoine de Saint-Exupéry", 22));
+        books.add(new Book("Shadow Hunters", "Cassandra Clare", 20.50));
+        books.add(new Book("El Principito", "Antoine de Saint-Exupéry", 22));
     }
 
     public List<Book> getBooks() {
         return books;
     }
 
-    // public Book getBookById(int id) {
-    //     return books.
-    // }
+    public Book getBookByTitle(String name) {
+        return books.stream().filter(book -> book.getTitle().equals(name)).findFirst().orElse(null);
+    }
 }

@@ -1,24 +1,18 @@
 package com.sales.model;
 
 public class Book {
-    private int id;
-    private String name;
+    private String title;
     private String author;
     private double price;
 
-    public Book(int id, String name, String author, double price) {
-        this.id = id;
-        this.name = name;
+    public Book(String title, String author, double price) {
+        this.title = title;
         this.author = author;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     public String getAuthor() {
