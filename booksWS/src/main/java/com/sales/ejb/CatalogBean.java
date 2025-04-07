@@ -21,6 +21,20 @@ public class CatalogBean {
     }
 
     public Book getBookByTitle(String name) {
-        return books.stream().filter(book -> book.getTitle().equals(name)).findFirst().orElse(null);
+        return books.stream()
+                   .filter(book -> book.getTitle().equals(name))
+                   .findFirst()
+                   .orElse(null);
+    }
+
+    public void addBook(Book book) {
+        if (book != null && !bookExists(book.getTitle())) {
+            books.add(book);
+        }
+    }
+
+    private boolean bookExists(String title) {
+        return books.stream()
+                   .anyMatch(book -> book.getTitle().equalsIgnoreCase(title));
     }
 }

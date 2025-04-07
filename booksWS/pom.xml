@@ -50,7 +50,7 @@
         <version>3.3.2</version>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
-          <outputDirectory>C:\Users\may_7\Downloads\wildfly-35.0.1.Final\wildfly-35.0.1.Final\standalone\deployments</outputDirectory> <!-- Aquí especifica tu carpeta de salida -->
+          <outputDirectory>C:\wildfly-35.0.1.Final\standalone\deployments</outputDirectory> <!-- Aquí especifica tu carpeta de salida -->
         </configuration>
       </plugin>
     </plugins>
