@@ -4,6 +4,7 @@ public class Book {
     private String title;
     private String author;
     private double price;
+    private int quantity;
 
     public Book(String title, String author, double price) {
         this.title = title;
@@ -12,14 +13,22 @@ public class Book {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getAuthor() {
-        return author;
+        return this.author;
     }
 
     public double getPrice() {
-        return price;
+        return this.price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 }
