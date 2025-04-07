@@ -1,5 +1,11 @@
 package com.sales.rest;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import jakarta.enterprise.context.SessionScoped;
+import java.io.Serializable;
+
 import com.sales.ejb.CartBean;
 import com.sales.ejb.CatalogBean;
 import com.sales.model.Book;
@@ -9,46 +15,52 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
 
+@SessionScoped
 @Path("/cart")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class CartResource {
+public class CartResource implements Serializable {
 
     @EJB
-    private CartBean cartBean; // Inyecta tu EJB Stateful
+    private CartBean cartBean;
 
     @EJB
     private CatalogBean catalogBean;
 
-    // Añadir libro al carrito (por título)
     @POST
     @Path("/add")
-    public Response addToCart(Book book) { // Recibe un JSON con { "title": "...", "price": x.x }
+    public Response addToCart(String jsonBody) {
+        JsonObject json = JsonParser.parseString(jsonBody).getAsJsonObject();
+        String title = json.get("title").getAsString();
+        Book book = catalogBean.getBookByTitle(title);
+        if (book == null) {
+            return Response.status(Response.Status.NOT_FOUND).entity("Libro no encontrado").build();
+        }
         cartBean.addBook(book);
         return Response.ok().build();
     }
 
-    // Eliminar libro del carrito (por título)
     @DELETE
-    @Path("/remove/{title}")
-    public Response removeFromCart(@PathParam("title") String title) {
+    @Path("/remove")
+    public Response removeFromCart(String jsonBody) {
+        JsonObject json = JsonParser.parseString(jsonBody).getAsJsonObject();
+        String title = json.get("title").getAsString();
         cartBean.removeBook(title);
         return Response.noContent().build();
     }
 
-    // Actualizar cantidad (aumentar/disminuir)
     @PUT
     @Path("/update-quantity")
     public Response updateQuantity(
             @QueryParam("title") String title,
-            @QueryParam("action") String action) { // "increase" o "decrease"
+            @QueryParam("action") String action) { 
         
         Book book = catalogBean.getBookByTitle(title);
 
         if ("increase".equals(action)) {
-            cartBean.addBook(book); // Aumenta cantidad en +1
+            cartBean.addBook(book); 
         } else if ("decrease".equals(action)) {
-            cartBean.decreaseBookQuantity(book); // Disminuye cantidad en -1
+            cartBean.decreaseBookQuantity(book); 
         } else {
             return Response.status(Response.Status.BAD_REQUEST).entity("Acción no válida").build();
         }
@@ -56,12 +68,9 @@ public class CartResource {
         return Response.ok().build();
     }
 
-    // Obtener todos los libros del carrito
     @GET
     public Response getCartItems() {
         List<Book> books = cartBean.getSavedBooks();
-        
-        // Devuelve un JSON combinado (libros + total)
         return Response.ok(books).build();
     }
 }

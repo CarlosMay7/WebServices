@@ -6,11 +6,9 @@ async function loadCatalog() {
             displayCatalog(books);
         } else {
             console.error('Error al cargar el catálogo');
-            showNotification('Error al cargar el catálogo', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -25,34 +23,35 @@ async function addToCart(title) {
         });
 
         if (response.ok) {
-            showNotification('Libro añadido al carrito');
             loadCart();
         } else {
             console.error('Error al agregar al carrito');
-            showNotification('Error al agregar al carrito', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 
 async function removeFromCart(title) {
     try {
-        const response = await fetch(`/booksWS/api/cart/remove/${encodeURIComponent(title)}`, {
-            method: 'DELETE'
+        const response = await fetch('/booksWS/api/cart/remove', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ title: title })
         });
 
         if (response.ok) {
-            showNotification('Libro eliminado del carrito', 'warning');
             loadCart();
         } else {
             console.error('Error al eliminar del carrito');
-            showNotification('Error al eliminar del carrito', 'error');
         }
+        
+        
+
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -65,11 +64,9 @@ async function loadCart() {
             updateCartCount(books.length);
         } else {
             console.error('Error al cargar el carrito');
-            showNotification('Error al cargar el carrito', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -85,16 +82,13 @@ async function addBook(event) {
         });
 
         if (response.ok) {
-            showNotification('Libro agregado correctamente');
             loadCatalog();
             event.target.reset();
         } else {
             console.error('Error al agregar el libro');
-            showNotification('Error al agregar el libro', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -195,11 +189,9 @@ async function updateQuantity(title, action) {
             loadCart();
         } else {
             console.error('Error al actualizar la cantidad');
-            showNotification('Error al actualizar cantidad', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
-        showNotification('Error de conexión', 'error');
     }
 }
 

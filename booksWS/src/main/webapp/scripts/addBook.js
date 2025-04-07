@@ -5,16 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        try {
-            const formData = new FormData(form);
-            const data = new URLSearchParams(formData);
+        const formData = new FormData(form);
+        const data = {
+            title: formData.get('title'),
+            author: formData.get('author'),
+            price: parseFloat(formData.get('price')),
+            quantity: parseInt(formData.get('quantity'))
+        };
 
-            const response = await fetch('catalogServlet', {
+        try {
+            const response = await fetch('/booksWS/api/books', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: data
+                body: JSON.stringify(data)
             });
 
             const result = await response.json();
