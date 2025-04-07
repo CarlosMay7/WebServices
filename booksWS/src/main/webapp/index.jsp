@@ -54,44 +54,6 @@
             <div id="bookList" class="book-grid" aria-label="Lista de libros disponibles">
             </div>
         </section>
-
-        <!-- <section class="add-book-section">
-            <h2>Agregar Nuevo Libro</h2>
-            <form class="add-book-form" onsubmit="addBook(event)" aria-label="Formulario para agregar nuevo libro">
-                <div class="form-group">
-                    <label for="title">Título:</label>
-                    <input type="text" 
-                           id="title" 
-                           name="title" 
-                           required 
-                           aria-required="true">
-                </div>
-
-                <div class="form-group">
-                    <label for="author">Autor:</label>
-                    <input type="text" 
-                           id="author" 
-                           name="author" 
-                           required 
-                           aria-required="true">
-                </div>
-
-                <div class="form-group">
-                    <label for="price">Precio:</label>
-                    <input type="number" 
-                           id="price" 
-                           name="price" 
-                           step="0.01" 
-                           required 
-                           aria-required="true">
-                </div>
-
-                <div id="formMessage" class="message" aria-live="polite"></div>
-
-                <button type="submit" class="submit-btn">Agregar</button>
-                <button type="reset" class="reset-btn">Limpiar</button>
-            </form>
-        </section> -->
     </main>
 
     <footer>
