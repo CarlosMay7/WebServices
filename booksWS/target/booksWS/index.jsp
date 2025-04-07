@@ -16,7 +16,7 @@
         </div>
         <div class="nav-links">
             <a href="#" class="active" aria-current="page">Inicio</a>
-            <a href="#" aria-label="Ver categorías">Categorías</a>
+            <a href="#" aria-label="Ver categorias">Categorias</a>
             <a href="#" aria-label="Ver ofertas">Ofertas</a>
         </div>
         <div class="cart-icon">
@@ -45,11 +45,11 @@
     <main>
         <section class="hero">
             <h2>Descubre Nuevas Historias</h2>
-            <p>Explora nuestra colección de libros cuidadosamente seleccionados</p>
+            <p>Explora nuestra coleccion de libros cuidadosamente seleccionados</p>
         </section>
 
         <section class="catalog">
-            <h2>Catálogo de Libros</h2>
+            <h2>Catalogo de Libros</h2>
 
             <div id="bookList" class="book-grid" aria-label="Lista de libros disponibles">
             </div>

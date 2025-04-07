@@ -97,5 +97,6 @@
             </button>
         </div>
     </div>
+    <script src="soapFunctions.js"></script>
 </body>
 </html>
