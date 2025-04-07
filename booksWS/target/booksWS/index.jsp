@@ -36,7 +36,7 @@
         <div class="cart-total">
             <a href="checkout.jsp">
                 <button class="checkout-btn" aria-label="Proceder al pago">
-                        Proceder al Pago
+                        Ver resumen de compra
                 </button>
             </a>
         </div>
