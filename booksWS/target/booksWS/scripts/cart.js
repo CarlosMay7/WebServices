@@ -1,70 +1,75 @@
 async function loadCatalog() {
     try {
-        const response = await fetch('catalogServlet');
+        const response = await fetch('/books');
         if (response.ok) {
             const books = await response.json();
             displayCatalog(books);
         } else {
             console.error('Error al cargar el catálogo');
+            showNotification('Error al cargar el catálogo', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 
 async function addToCart(title) {
     try {
-        const response = await fetch('cartServlet', {
+        const response = await fetch('/cart/add', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             },
-            body: `title=${JSON.stringify({title})}&action=add`
+            body: JSON.stringify({ title: title })
         });
 
         if (response.ok) {
+            showNotification('Libro añadido al carrito');
             loadCart();
-            updateCartCount();
         } else {
             console.error('Error al agregar al carrito');
+            showNotification('Error al agregar al carrito', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 
 async function removeFromCart(title) {
     try {
-        const response = await fetch('cartServlet', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `title=${JSON.stringify({title})}&action=remove`
+        const response = await fetch(`/cart/remove/${encodeURIComponent(title)}`, {
+            method: 'DELETE'
         });
 
         if (response.ok) {
+            showNotification('Libro eliminado del carrito', 'warning');
             loadCart();
-            updateCartCount();
         } else {
             console.error('Error al eliminar del carrito');
+            showNotification('Error al eliminar del carrito', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 
 async function loadCart() {
     try {
-        const response = await fetch('cartServlet');
+        const response = await fetch('/cart');
         if (response.ok) {
             const books = await response.json();
-            console.log(books);
             displayCart(books);
             updateCartCount(books.length);
+        } else {
+            console.error('Error al cargar el carrito');
+            showNotification('Error al cargar el carrito', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -72,25 +77,24 @@ async function addBook(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = new URLSearchParams(formData);
-
+    
     try {
-        const response = await fetch('catalogServlet', {
+        const response = await fetch('/books', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: data
+            body: formData
         });
 
         if (response.ok) {
+            showNotification('Libro agregado correctamente');
             loadCatalog();
             event.target.reset();
         } else {
             console.error('Error al agregar el libro');
+            showNotification('Error al agregar el libro', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 
@@ -183,21 +187,19 @@ function displayCart(books) {
 // Función complementaria para actualizar la cantidad
 async function updateQuantity(title, action) {
     try {
-        const response = await fetch('cartServlet', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `title=${JSON.stringify({title})}&action=updateQuantity&value=${JSON.stringify({value: action})}`
+        const response = await fetch(`/cart/update-quantity?title=${encodeURIComponent(title)}&action=${action}`, {
+            method: 'PUT'
         });
 
         if (response.ok) {
             loadCart();
         } else {
             console.error('Error al actualizar la cantidad');
+            showNotification('Error al actualizar cantidad', 'error');
         }
     } catch (error) {
         console.error('Error:', error);
+        showNotification('Error de conexión', 'error');
     }
 }
 

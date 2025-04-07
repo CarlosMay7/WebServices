@@ -1,3 +1,5 @@
+com\sales\rest\CartResource.class
+com\sales\rest\CatalogResource.class
 com\sales\ejb\CartBean.class
 com\sales\model\Book.class
 com\sales\ejb\CartBean$CartItem.class
