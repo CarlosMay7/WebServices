@@ -1,0 +1,6 @@
+com\sales\ejb\CartBean.class
+com\sales\model\Book.class
+com\sales\ejb\CartBean$CartItem.class
+com\sales\ejb\CartServlet.class
+com\sales\ejb\CatalogBean.class
+com\sales\ejb\CatalogServlet.class
