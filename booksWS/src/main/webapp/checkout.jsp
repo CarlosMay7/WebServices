@@ -60,43 +60,55 @@
 
         <div class="order-summary">
             <h2 class="section-title">Resumen del Pedido</h2>
-
-            <!-- Añade esto después del título "Resumen del Pedido" -->
-        <div class="currency-selector">
-            <label for="currency">Moneda:</label>
-            <select id="currency" onchange="changeCurrency(this.value)">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="JPY">JPY (¥)</option>
-            </select>
-        </div>
+        
+            <div class="currency-selector">
+                <label for="currency">Moneda:</label>
+                <select id="currency" onchange="changeCurrency(this.value)">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="JPY">JPY (¥)</option>
+                    <option value="MXN">MXN ($)</option>
+                </select>
+            </div>
             
             <div class="summary-item">
                 <span>Subtotal</span>
-                <span>$74.97</span>
+                <span id="subtotal">$74.97</span>
             </div>
             
             <div class="summary-item">
                 <span>Envío</span>
-                <span>$5.00</span>
+                <span id="shipping">$5.00</span>
             </div>
             
             <div class="summary-item">
                 <span>Impuestos</span>
-                <span>$7.50</span>
+                <span id="taxes">$7.50</span>
             </div>
             
             <div class="summary-total">
                 <span>Total</span>
-                <span>$87.47</span>
+                <span id="total">$87.47</span>
             </div>
-
-            <button class="checkout-btn">
+        
+            <!-- Nuevos elementos para mostrar los cálculos SOAP -->
+            <div class="soap-calculations">
+                <div class="summary-item">
+                    <span>Total con IVA</span>
+                    <span id="totalWithVAT">Calculando...</span>
+                </div>
+                <div class="summary-item">
+                    <span>Total en MXN</span>
+                    <span id="totalInMXN">Calculando...</span>
+                </div>
+            </div>
+        
+            <button class="checkout-btn" onclick="calculateTotals()">
                 <i class="fas fa-lock"></i> Proceder al Pago
             </button>
         </div>
     </div>
-    <script src="soapFunctions.js"></script>
+    <script src="scripts/soapFunctions.js"></script>
 </body>
 </html>
