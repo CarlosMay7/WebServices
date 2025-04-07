@@ -1,6 +1,6 @@
 async function loadCatalog() {
     try {
-        const response = await fetch('/books');
+        const response = await fetch('/booksWS/api/books');
         if (response.ok) {
             const books = await response.json();
             displayCatalog(books);
@@ -16,7 +16,7 @@ async function loadCatalog() {
 
 async function addToCart(title) {
     try {
-        const response = await fetch('/cart/add', {
+        const response = await fetch('/booksWS/api/cart/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ async function addToCart(title) {
 
 async function removeFromCart(title) {
     try {
-        const response = await fetch(`/cart/remove/${encodeURIComponent(title)}`, {
+        const response = await fetch(`/booksWS/api/cart/remove/${encodeURIComponent(title)}`, {
             method: 'DELETE'
         });
 
@@ -58,7 +58,7 @@ async function removeFromCart(title) {
 
 async function loadCart() {
     try {
-        const response = await fetch('/cart');
+        const response = await fetch('/booksWS/api/cart');
         if (response.ok) {
             const books = await response.json();
             displayCart(books);
@@ -79,7 +79,7 @@ async function addBook(event) {
     const formData = new FormData(event.target);
     
     try {
-        const response = await fetch('/books', {
+        const response = await fetch('/booksWS/api/books', {
             method: 'POST',
             body: formData
         });
@@ -187,7 +187,7 @@ function displayCart(books) {
 // Función complementaria para actualizar la cantidad
 async function updateQuantity(title, action) {
     try {
-        const response = await fetch(`/cart/update-quantity?title=${encodeURIComponent(title)}&action=${action}`, {
+        const response = await fetch(`/booksWS/api/cart/update-quantity?title=${encodeURIComponent(title)}&action=${action}`, {
             method: 'PUT'
         });
 

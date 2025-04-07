@@ -26,13 +26,13 @@ public class CatalogResource {
     // POST /books → Adds a new book
     @POST
     public Response addBook(@FormParam("title") String title,
-                      @FormParam("author") String author,
-                      @FormParam("price") double price,
-                      @FormParam("quantity") int quantity) {
-    
-    Book book = new Book(title, author, price);
-    book.setQuantity(quantity);
-    catalogBean.addBook(book);
-    return Response.status(Response.Status.CREATED).build();
-}
+                            @FormParam("author") String author,
+                            @FormParam("price") double price,
+                            @FormParam("quantity") int quantity) {
+        
+        Book book = new Book(title, author, price);
+        book.setQuantity(quantity);
+        catalogBean.addBook(book);
+        return Response.status(Response.Status.CREATED).build();
+    }
 }
