@@ -1,11 +1,14 @@
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CartBean.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CartServlet.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogBean.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogServlet.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\model\Book.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\CartResource.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\CatalogResource.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\RestApplication.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\BooksSoap.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\GeneratorSoap.java
-C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\SoapServlet.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\RestApplication.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\CartResource.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\UserResource.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\model\Book.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogBean.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\CatalogResource.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CartBean.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CartServlet.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\soap\GeneratorSoap.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\soap\SoapServlet.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\soap\BooksSoap.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\UserBean.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogServlet.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\model\User.java
