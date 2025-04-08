@@ -13,7 +13,7 @@ public class BooksSoap {
     }
 
     @WebMethod
-    public double convertToMXN(@WebParam(name = "subtotal") double subtotal) {
+    public double convertToCurrency(@WebParam(name = "subtotal") double subtotal) {
         return subtotal * 20.44;
     }
 }

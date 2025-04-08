@@ -23,12 +23,14 @@ public class SoapServlet extends HttpServlet {
                 break;
 
             case "priceWithVAT":
-                double vatPrice = books.calculatePriceWithVAT();
+                double subtotalVAT = Double.parseDouble(request.getParameter("subtotal"));
+                double vatPrice = books.applyVAT(subtotalVAT);
                 response.getWriter().write("{\"priceWithVAT\":" + vatPrice + "}");
                 break;
 
             case "convertCurrency":
-                double mxnPrice = books.convertToCurrency();
+                double subtotalMXN = Double.parseDouble(request.getParameter("subtotal"));
+                double mxnPrice = books.convertToCurrency(subtotalMXN);
                 response.getWriter().write("{\"convertedPrice\":" + mxnPrice + "}");
                 break;
 
