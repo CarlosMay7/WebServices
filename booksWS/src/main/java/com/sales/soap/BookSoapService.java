@@ -24,21 +24,18 @@ public class BookSoapService {
         if (book == null) {
             return "Book not found";
         }
-        // Se genera un ISBN ficticio usando el hash del título
         return "978-3-" + Math.abs(title.hashCode()) + "-X";
     }
 
     @WebMethod
     public double calculatePriceWithVAT() {
         double total = cartBean.getTotal();
-        // Se agrega el 16% de IVA
         return total * 1.16;
     }
 
     @WebMethod
     public double convertToCurrency() {
         double total = cartBean.getTotal();
-        // Conversión a pesos mexicanos (por ejemplo)
         return total * 20.44;
     }
 }
