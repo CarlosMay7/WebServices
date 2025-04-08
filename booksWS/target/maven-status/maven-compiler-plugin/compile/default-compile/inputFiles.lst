@@ -3,6 +3,9 @@ C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogBean.java
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogServlet.java
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\model\Book.java
+C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\CartResource.java
+C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\CatalogResource.java
+C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\rest\RestApplication.java
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\BooksSoap.java
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\GeneratorSoap.java
 C:\Users\Andrea Mendoza\OneDrive\Escritorio\FMAT\Octavo semestre\SisDistribuidos\WebServices\booksWS\src\main\java\com\sales\soap\SoapServlet.java

@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
         </div>
         <div class="cart-summary">
             <p class="summary-line">Subtotal: <span id="subtotal" class="summary-price">$0.00</span></p>
-            <p class="summary-line">Envío: <span class="shipping-fee">$5.00</span></p>
+            <p class="summary-line">Envio: <span class="shipping-fee">$5.00</span></p>
             <p class="summary-line">Impuestos: <span class="tax-fee">$7.50</span></p>
         
             <h3 class="total-main">Total: <span id="total" class="total-amount">$0.00</span></h3>

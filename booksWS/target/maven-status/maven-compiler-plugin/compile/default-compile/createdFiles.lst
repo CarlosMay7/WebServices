@@ -1,9 +1,12 @@
 com\sales\ejb\CartBean.class
+com\sales\ejb\CartBean$CartItem.class
+com\sales\ejb\CatalogServlet.class
+com\sales\soap\SoapServlet.class
+com\sales\rest\CartResource.class
+com\sales\rest\CatalogResource.class
 com\sales\soap\BooksSoap.class
 com\sales\model\Book.class
-com\sales\ejb\CartBean$CartItem.class
 com\sales\soap\GeneratorSoap.class
 com\sales\ejb\CartServlet.class
 com\sales\ejb\CatalogBean.class
-com\sales\ejb\CatalogServlet.class
-com\sales\soap\SoapServlet.class
+com\sales\rest\RestApplication.class

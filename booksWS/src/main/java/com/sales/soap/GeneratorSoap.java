@@ -24,3 +24,4 @@ public class GeneratorSoap {
         return isbn;
     }
 }
+
