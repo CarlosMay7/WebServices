@@ -9,10 +9,12 @@ import java.io.Serializable;
 import com.sales.ejb.CartBean;
 import com.sales.ejb.CatalogBean;
 import com.sales.model.Book;
+
 import jakarta.ejb.EJB;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
 import java.util.List;
 
 @SessionScoped

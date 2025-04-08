@@ -1,6 +1,7 @@
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\RestApplication.java
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\CartResource.java
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\model\Book.java
+C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\soap\BookSoapService.java
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CatalogBean.java
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\rest\CatalogResource.java
 C:\Users\aaron\OneDrive\8vo Semestre\Sistemas\WebServices\booksWS\src\main\java\com\sales\ejb\CartBean.java
