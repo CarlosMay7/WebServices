@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -16,8 +16,10 @@
         </div>
         <div class="nav-links">
             <a href="#" class="active" aria-current="page">Inicio</a>
-            <a href="#" aria-label="Ver categor&iacute;as">Categor&iacute;as</a>
+            <a href="#" aria-label="Ver categorías">Categor&iacute;as</a>
             <a href="#" aria-label="Ver ofertas">Ofertas</a>
+            <!-- Nuevo botón para administrar usuarios -->
+            <a href="users.jsp" aria-label="Administrar Usuarios">Usuarios</a>
         </div>
         <div class="cart-icon">
             <button aria-label="Abrir carrito de compras" onclick="toggleCart()">
@@ -77,13 +79,13 @@
             <div class="footer-section">
                 <h3>S&iacute;guenos</h3>
                 <div class="social-links">
-                    <a href="#" aria-label="S&iacute;guenos en Facebook">
+                    <a href="#" aria-label="Síguenos en Facebook">
                         <i class="fab fa-facebook" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="S&iacute;guenos en Twitter">
+                    <a href="#" aria-label="Síguenos en Twitter">
                         <i class="fab fa-twitter" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="S&iacute;guenos en Instagram">
+                    <a href="#" aria-label="Síguenos en Instagram">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
                 </div>
